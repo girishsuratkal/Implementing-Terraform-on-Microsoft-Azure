@@ -22,10 +22,10 @@ variable "arm_region" {
   default = "eastus"
 }
 variable "arm_resource_group_name" {
-    default = "ps-noprd-rg1"
+    default = "ps-noprd-gsrg1"
 }
 variable "arm_stroage_account_name" {
-    default = "psinfrasdbx10000mysa"
+    default = "psinfrasdbx10000gssa"
 }
 variable "arm_container_name" {
     default = "tfstate"
