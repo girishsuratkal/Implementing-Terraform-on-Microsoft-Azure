@@ -8,17 +8,17 @@ az logout
 
 
 
-terraform init -backend-config="./variable/backend.tfvars" -backend-config="../secret/main-lv.json" -reconfigure
+terraform init -backend-config="./variable/backend.tfvars" -backend-config="../secret/main-gs.json" -reconfigure
 
 terraform workspace new Development
 # terraform workspace list
 # terraform workspace select Development 
 
-terraform plan -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-lv.json" -out development-vnet.tfplan
+terraform plan -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-gs.json" -out development-vnet.tfplan
 
 terraform apply "development-vnet.tfplan"
 
-terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-lv.json"
+terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-gs.json"
 
 /*
 VNet: gsvnet1
@@ -26,4 +26,5 @@ resource_group_name = "ps-noprd-gsrg1"
 storage_account_name = "psinfrasdbx10000gssa" #Name must be unique
 container_name = "tfstate"
 key = "main-vnet-01-dev.tfstate"
+secret = ../secret/main-gs.json
 */
