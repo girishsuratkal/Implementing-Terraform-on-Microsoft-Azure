@@ -19,3 +19,11 @@ terraform plan -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secr
 terraform apply "development-vnet.tfplan"
 
 terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-lv.json"
+
+/*
+VNet: gsvnet1
+resource_group_name = "ps-noprd-gsrg1"
+storage_account_name = "psinfrasdbx10000gssa" #Name must be unique
+container_name = "tfstate"
+key = "main-vnet-01-dev.tfstate"
+*/
