@@ -1,2 +1,2 @@
-rg_infr_name = "ps-noprd-rg1"
-vnet_name = "myvnet1"
+rg_infr_name = "ps-noprd-gsrg1"
+vnet_name = "gsvnet1"
