@@ -21,7 +21,7 @@ variable "client_secret" {
 variable "rg_infr_name" {
   description = "Resource group name that will host our services"
     type = string
-    default = "demo-rg"
+    default = "ps-noprd-gsrg1"
 }
 ######
 
@@ -32,7 +32,7 @@ variable "location" {
 
 variable "vnet_name" {
   type    = string
-  default = "demo-vnet"
+  default = "gsvnet1"
 }
 
 variable "vnet_cidr_range" {
