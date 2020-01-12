@@ -10,7 +10,7 @@ az logout
 
 terraform init -backend-config="./variable/backend.tfvars" -backend-config="../secret/main-gs.json" -reconfigure
 
-terraform workspace new Development
+# terraform workspace new Development
 # terraform workspace list
 # terraform workspace select Development 
 
