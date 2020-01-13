@@ -9,7 +9,7 @@ resource "random_password" "vnet_peering" {
 }
 
 resource "azuread_application" "vnet_peering" {
-  name = "vnet-peer"
+  name = "vnet-peer-gs"
 }
 
 resource "azuread_service_principal" "vnet_peering" {
@@ -23,7 +23,7 @@ resource "azuread_service_principal_password" "vnet_peering" {
 }
 
 resource "azurerm_role_definition" "vnet-peering" {
-  name     = "allow-vnet-peering"
+  name     = "allow-vnet-peering-gs"
   scope    = data.azurerm_subscription.current.id
 
   permissions {
