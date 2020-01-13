@@ -21,6 +21,7 @@ terraform apply "development-vnet.tfplan"
 terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-gs.json"
 
 /*
+### Girish
 Working Folder: ~/gitprojects/Implementing-Terraform-on-Microsoft-Azure/1-main-vnet
 VNet: gsvnet1
 resource_group_name = "ps-noprd-gsrg1"
@@ -28,4 +29,12 @@ storage_account_name = "psinfrasdbx10000gssa" #Name must be unique
 container_name = "tfstate"
 key = "main-vnet-01-dev.tfstate"
 secret = ../secret/main-gs.json
+
+### Len
+resource_group_name = "ps-noprd-rg1"
+storage_account_name = "psinfrasdbx10000mysa" #Name must be unique
+container_name = "tfstate"
+key = "main-vnet-01-dev.tfstate"
+####
+
 */
