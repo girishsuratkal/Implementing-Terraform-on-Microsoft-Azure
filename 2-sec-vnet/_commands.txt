@@ -1,21 +1,11 @@
-az login
-az logout
-az account show
-az account set --subscription "AzIntConsumption"
 
-
-
-
-
-
-
-terraform init -backend-config="./variable/backend.tfvars" -backend-config="../secret/main-lv.json" -reconfigure
+terraform init -backend-config="./variable/backend.tfvars" -backend-config="../secret/main-gs.json" -reconfigure
 
 terraform workspace new Development
 terraform workspace select Development
 
-terraform plan -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-lv.json" -out development-vnet.tfplan
+terraform plan -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-gs.json" -out development-vnet.tfplan
 
 terraform apply "development-vnet.tfplan"
 
-terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-lv.json"
+terraform destroy -var-file="./variable/00_main-vnet-dev.tfvars" -var-file="../secret/main-gs.json"
